@@ -1,0 +1,391 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1er hack para que 1rem = 10px */
+  line-height: 2; /* separacion entre los parrafos de un texto*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem; /*2do hack para que la base sea de 16px*/
+}
+
+/*Globales*/
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 86%;
+  margin: 0 auto;
+}
+/*Header*/
+
+.todo-header {
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.header i {
+  font-size: 5rem;
+}
+
+.head-derecha {
+  font-weight: 700;
+}
+
+.header a {
+  color: black;
+  font-size: 1.8rem;
+  padding-right: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .header a {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .head-derecha i {
+    display: none;
+  }
+}
+
+/*hero*/
+
+.todo-hero {
+  height: 55rem;
+  position: relative;
+  margin: auto;
+  background-image: url(../img/pexels-cottonbro-5473298.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.todo-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+}
+
+.hero h1 {
+  color: #ffffff;
+  position: relative;
+  flex: flex;
+  justify-content: center;
+  font-size: 7rem;
+  padding-top: 10rem;
+  padding-left: 2rem;
+  -webkit-text-stroke: 0.2rem rgb(0, 0, 0);
+}
+
+.hero i {
+  color: #ffffff;
+  position: relative;
+  font-size: 24rem;
+  display: flex;
+  justify-content: center;
+  -webkit-text-stroke: 0.2rem rgb(0, 0, 0);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12rem;
+  }
+
+  .hero h1 {
+    color: #ffffff;
+    position: relative;
+    font-size: 8rem;
+    padding-right: 3rem;
+    -webkit-text-stroke: 0.2rem rgb(0, 0, 0);
+  }
+
+  .hero i {
+    color: #ffffff;
+    position: relative;
+    font-size: 30rem;
+    padding-right: 3rem;
+    -webkit-text-stroke: 0.2rem rgb(0, 0, 0);
+  }
+}
+
+/* NO SOY MISA*/
+
+.soy-mauro {
+  background-color: black;
+  height: 70rem;
+}
+.mauro-medio {
+  width: 50%;
+  margin: 0 26%;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding-top: 20rem;
+  flex-direction: row;
+}
+
+.mauro-medio img {
+  display: flex;
+  width: 21.1rem;
+}
+
+.mauro-medio h2 {
+  color: #ffffff;
+  font-size: 4.4rem;
+}
+
+.mauro-medio p {
+  color: #ffffff;
+  font-size: 2rem;
+  width: 53.2rem;
+  margin-top: -2rem;
+}
+
+@media (max-width: 768px) {
+  .mauro-medio {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .soy-mauro {
+    background-color: black;
+    height: 90rem;
+  }
+
+  .mauro-medio img {
+    width: 20rem;
+  }
+
+  .mauro-medio h2 {
+    font-size: 4rem;
+    padding-left: 2.5rem;
+  }
+  .mauro-medio p {
+    font-size: 1.9rem;
+    width: 32rem;
+    padding-top: 3rem;
+  }
+}
+
+/*seccion computadoras*/
+
+.computadoras {
+  background-color: #ffffff;
+  height: auto;
+  padding-bottom: 6rem;
+}
+
+.computadoras h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 6.5rem;
+  margin-bottom: 9rem;
+  font-size: 5rem;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .computadoras h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    font-weight: 700;
+    font-size: 6rem;
+    color: #000000;
+    text-decoration: underline;
+    /* -webkit-text-stroke: 0.2rem rgb(0, 0, 0); */
+  }
+}
+
+.grid-todo {
+  display: grid;
+  gap: 6rem;
+}
+
+@media (min-width: 768px) {
+  .computadoras {
+    height: auto;
+    padding-bottom: 10rem;
+  }
+
+  .grid-todo {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 8rem;
+    padding-top: 3.5rem;
+  }
+}
+
+.grid-cuadro {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ebebeb;
+  border-radius: 1rem;
+}
+
+.grid-cuadro img {
+  width: 13.8rem;
+  height: 13.8rem;
+  display: flex;
+  align-self: center;
+}
+
+.grid-cuadro h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.grid-cuadro p {
+  margin-top: -0.5rem;
+  color: #000000;
+}
+
+/*ESCRIBIME*/
+
+.escribime {
+  height: 68rem;
+  background-color: rgb(87, 109, 117);
+}
+
+@media (min-width: 768px) {
+  .todo-centro {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    padding-top: 8rem;
+    margin-bottom: 10rem;
+  }
+}
+.cuadritos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+}
+
+.escribime h2 {
+  color: #ffffff;
+  font-size: 4.8rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+  margin-bottom: -0.2rem;
+}
+@media (min-width: 768px) {
+  .escribime h2 {
+    color: #ffffff;
+    font-size: 4.8rem;
+    display: flex;
+    padding-top: 1.5rem;
+  }
+
+  .cuadritos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    width: 37.1rem;
+  }
+}
+
+.cuadritos label {
+  color: #ffffff;
+  margin-top: 2.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.cuadritos input,
+textarea {
+  padding: 0.5rem 1rem;
+  border: 0.2rem solid rgb(55, 92, 104);
+}
+
+.cuadritos button {
+  margin-top: 4rem;
+  padding: 1rem;
+  font-weight: 700;
+  background-color: rgb(85, 229, 255);
+  border-radius: 1rem;
+}
+
+/*footer*/
+
+.footer {
+  height: auto;
+  background-color: #e1e1e1e1;
+}
+
+.flex-foot {
+  padding: 5.8rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    height: 30rem;
+    background-color: #e1e1e1e1;
+  }
+
+  .flex-foot {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rem;
+  }
+}
+.flex-izq i {
+  font-size: 8rem;
+  margin-left: 2.2rem;
+}
+
+.flex-izq h3 {
+  margin-left: 3.4rem;
+  margin-top: -0.8rem;
+}
+
+.flex-izq p {
+  color: #757575;
+  margin-top: -1rem;
+  margin-left: 0.8rem;
+}
+
+.flex-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-right: 13rem;
+  margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+  .flex-derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-right: 13rem;
+    margin-top: -3rem;
+  }
+}
